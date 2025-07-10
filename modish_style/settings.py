@@ -14,6 +14,16 @@ from pathlib import Path
 from datetime import timedelta
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+import os  # Needed for file path operations
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+
+
+# Media files (user-uploaded content)
+MEDIA_URL = '/media/'  # URL prefix for media
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # Local storage path
 
 
 # Quick-start development settings - unsuitable for production
